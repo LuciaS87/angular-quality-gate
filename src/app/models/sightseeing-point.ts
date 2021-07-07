@@ -15,7 +15,8 @@ export class SightseeingPoint {
     return new Map([[1, '#FF5733'], [2, '#54CCE2'], [3, '#973AFF']]);
   }
 
-  getColor(): string {
-    return SightseeingPoint.colors().get(this.color);
+  getColor(color: number): string {
+    return SightseeingPoint.colors().get(color);
   }
+
 }
