@@ -48,8 +48,8 @@
       </div>
       <p>
         <label for="color">Color </label>
-        <select id="color" name="color" formControlName="color">
-          <option>Select color</option>
+        <select id="color" name="color" formControlName="color" required>
+          <option disabled selected> Select color</option>
           <option [ngValue]="color[0]" *ngFor="let color of siteColors">
             {{color[1]}}
           </option>
