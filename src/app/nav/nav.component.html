@@ -1,5 +1,16 @@
 <nav>
   <a *ngFor="let link of links"
      routerLink="{{link.path}}" class="{{link.style}}" routerLinkActive="active-link"> {{link.title}} </a>
+
+  <a>
+    <label for="city">City </label>
+    <select id="city" name="city" required (change)="onItemChange($event)">
+      <option disabled selected> Select City</option>
+      <option [value]="city" *ngFor="let city of citiesNames">
+        {{city}}
+      </option>
+    </select>
+  </a>
 </nav>
+
 <div class="nav-shadow"></div>

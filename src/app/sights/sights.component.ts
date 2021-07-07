@@ -1,20 +1,22 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {SightseeingPoint} from '../models/sightseeing-point';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {Router} from '@angular/router';
 import {SightsService} from '../services/sights.service';
 import {MapComponent} from '../map/map.component';
 import {Location} from '../models/location';
+import {Country} from '../models/country';
 
 @Component({
   selector: 'app-sights',
   templateUrl: './sights.component.html',
   styleUrls: ['./sights.component.scss']
 })
-export class SightsComponent implements OnInit {
+export class SightsComponent implements OnInit, OnDestroy {
 
   @ViewChild('mapComponent', {static: false}) mapComponent: MapComponent;
   currentCity: Location;
+  selectedCity: Subject<Location>;
   sights$: Observable<SightseeingPoint[]>;
 
   constructor(
@@ -24,8 +26,12 @@ export class SightsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.currentCity = new Location(19.9449, 50.0646);
-    this.sights$ = this.sightsService.getSights();
+    this.selectedCity = this.sightsService.selectedCity;
+    this.selectedCity.subscribe(city => {
+      this.currentCity = city;
+      this.sights$ = this.sightsService.getSightsInRange(this.currentCity, 15000);
+    });
+    this.selectedCity.next(new Location(19.9449, 50.0646));
   }
 
   centerMap(location: Location): void {
@@ -34,6 +40,10 @@ export class SightsComponent implements OnInit {
 
   selectSight(sight: SightseeingPoint): void {
     this.sightsService.selectedSight = sight;
-    this.router.navigate(['/sight']).then();
+    this.router.navigate(['/sights']).then();
+  }
+
+  ngOnDestroy(): void {
+    this.selectedCity.unsubscribe();
   }
 }

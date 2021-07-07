@@ -33,7 +33,7 @@
       "color": 1
     },
     {
-      "name": "Warszawa",
+      "name": "Gdzies w Krakowie",
       "longitude": 19.957947163916888,
       "latitude": 50.06150072587465,
       "description": "angular",
@@ -47,6 +47,38 @@
       "description": "Możesz sprawdzić na mapie, czy punkt zostanie poprawnie wyświetlony an rynku w Krakowie.",
       "color": 1,
       "id": "2pH*v2oU5*"
+    },
+    {
+      "name": "The Market Square Wrocław",
+      "longitude": 17.030717707215583,
+      "latitude": 51.11123420339965,
+      "description": "Beautiful and spacious. Vibrant atmosphere. Wonderful gothic style architecture. Enchanted place day and night.",
+      "color": 1,
+      "id": "eoxF5UETQ*"
+    },
+    {
+      "name": "Świebodzki Market Square",
+      "longitude": 17.02418724053382,
+      "latitude": 51.10956957022611,
+      "description": "Very nice and organized place, good structure. But the kitchen and common areas were not available. It wasn't possible to fully evaluate the hostel.",
+      "color": 3,
+      "id": "iNrGx1e5*y"
+    },
+    {
+      "name": "The Royal Castle in Warsaw",
+      "longitude": 21.02819684139451,
+      "latitude": 52.24185725568225,
+      "description": "Reconstructed 14th-century palace with an art collection & guided tours of the royal apartments.",
+      "color": 2,
+      "id": "KXtQcVG0Du"
+    },
+    {
+      "name": "Warsaw Uprising Museum",
+      "longitude": 20.98367868907411,
+      "latitude": 52.230574689157365,
+      "description": "Memorial & replica bomber in museum of exhibits detailing Poland's 1944 battle for independence.",
+      "color": 2,
+      "id": "qO8FA9A*Qm"
     }
   ]
 }

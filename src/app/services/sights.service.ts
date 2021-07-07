@@ -1,16 +1,18 @@
 import {Injectable} from '@angular/core';
 import {SightseeingPoint} from '../models/sightseeing-point';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {Country} from '../models/country';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
+import {Location} from '../models/location';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SightsService {
   selectedSight: SightseeingPoint;
+  selectedCity = new Subject<Location>();
 
   constructor(private http: HttpClient) {
   }
@@ -46,13 +48,22 @@ export class SightsService {
     );
   }
 
+  getSightsInRange(currentCity: Location, inRange: number): Observable<SightseeingPoint[]> {
+    return this.getSights().pipe(map(sights => {
+      return sights.filter(sight => sight.range(currentCity) <= inRange);
+    }));
+  }
+
+
   addSight(sight: SightseeingPoint): Observable<void> {
     sight.id = SightsService.generateId();
     return this.http.post<void>(`${environment.apiUrl}/sights`, sight);
   }
-  updateSight(sight: SightseeingPoint): Observable<SightseeingPoint>{
+
+  updateSight(sight: SightseeingPoint): Observable<SightseeingPoint> {
     return this.http.put<SightseeingPoint>(`${environment.apiUrl}/sights/${this.selectedSight.id}`, sight);
   }
+
   deleteSight(sightId: string): Observable<SightseeingPoint> {
     return this.http.delete<SightseeingPoint>(`${environment.apiUrl}/sights/${sightId}`);
   }
