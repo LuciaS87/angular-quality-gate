@@ -7,7 +7,8 @@ export class SightseeingPoint {
     public latitude: number = 0,
     public country: Country,
     public description: string = '',
-    public color: number = 0
+    public color: number = 0,
+    public id?: string
   ) {
   }
 

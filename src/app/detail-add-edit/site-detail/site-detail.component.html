@@ -1,1 +1,22 @@
-<p>site-detail works!</p>
+<div class="container" *ngIf="selectedSight">
+  <h4>{{selectedSight.name}}</h4>
+
+
+
+  <table class="table table-striped table-bordered" [style.background-color]="selectedSight.getColor(selectedSight.color)">
+    <thead>
+    <tr>
+      <th>Description</th>
+      <th>Color</th>
+
+    </tr>
+    </thead>
+    <tbody >
+    <tr>
+      <td> {{ selectedSight.description}}</td>
+      <td>{{selectedSight.color}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -14,6 +14,10 @@ export class NavComponent {
     {
       title: 'MAP',
       path: 'sights'
+    },
+    {
+      title: 'Add Site',
+      path: 'lazy/add'
     }
   ];
 }

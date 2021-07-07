@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'sights', component: SightsComponent},
   {path: 'sights-list', component: SightsListComponent},
   {path: 'lazy', loadChildren: () => import('./detail-add-edit/detail-add-edit-routing.module')
-      .then(m => m.DetailAddEditRoutingModule)}
+      .then(m => m.DetailAddEditRoutingModule)},
 ];
 
 @NgModule({

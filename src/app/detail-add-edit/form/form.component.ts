@@ -22,6 +22,8 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.siteColors = Array.from(SightseeingPoint.colors().keys());
     this.selectedSight = this.sightsService.selectedSight;
+    this.site.country.name = 'POLAND';
+    this.site.country.iata_code = 'PL';
     this.addForm = new FormGroup({
       name: new FormControl(this.site.name, [
         Validators.required,
@@ -40,6 +42,9 @@ export class FormComponent implements OnInit {
         [Validators.required]
       )
     });
+    if (this.selectedSight) {
+      this.addForm.patchValue(this.selectedSight);
+    }
   }
 
   get name(): AbstractControl {
@@ -63,6 +68,14 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(addForm: FormGroup): void {
-    console.log('wysylam');
+    this.selectedSight ? this.editSite(addForm) : this.addSite(addForm);
+  }
+
+  private addSite(addForm: FormGroup): void {
+    this.sightsService.addSite(addForm.value).subscribe(() => this.router.navigate(['']));
+  }
+
+  private editSite(addForm: FormGroup): void {
+    this.sightsService.updateSite(addForm.value).subscribe(() => this.router.navigate(['']));
   }
 }

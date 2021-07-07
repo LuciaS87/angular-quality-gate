@@ -8,7 +8,7 @@ import {SightsService} from '../services/sights.service';
   styleUrls: ['./sights-list.component.scss']
 })
 export class SightsListComponent implements OnInit {
-
+  selectedSight: SightseeingPoint;
   sights: SightseeingPoint[];
 
   constructor(private sightsService: SightsService) {
@@ -17,6 +17,12 @@ export class SightsListComponent implements OnInit {
   ngOnInit(): void {
     this.sightsService.getSights().subscribe(sights => {
       this.sights = sights;
+      console.log(sights);
     });
+  }
+
+  setActiveCity(site: SightseeingPoint): void {
+    this.selectedSight = site;
+    this.sightsService.selectedSight = this.selectedSight;
   }
 }

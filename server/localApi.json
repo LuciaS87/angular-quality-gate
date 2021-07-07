@@ -4,14 +4,12 @@
       "name": "Wawel",
       "longitude": 19.9353576,
       "latitude": 50.0541492,
-      "country": {
-        "name": "POLAND",
-        "iata_code": "PL"
-      },
       "description": "The Wawel Royal Castle and the Wawel Hill constitute the most historically and culturally important site in Poland. For centuries the residence of kings and the symbol of Polish statehood, the castle is now one of the country’s premier art museums.",
-      "color": 0
+      "color": 0,
+      "id": "1"
     },
     {
+      "id": "2",
       "name": "Dragon",
       "longitude": 19.933606117422418,
       "latitude": 50.053059067891,
@@ -23,6 +21,7 @@
       "color": 2
     },
     {
+      "id": "3",
       "name": "Krakus Mound",
       "longitude": 19.957947163916888,
       "latitude": 50.038264921962835,
@@ -32,6 +31,14 @@
       },
       "description": "This large mound of unknown origin is a popular destination for scenic views of the city.",
       "color": 1
+    },
+    {
+      "name": "Kraków 111",
+      "longitude": "19.957947163916844",
+      "latitude": "50.03826492196233",
+      "description": "sfagfas",
+      "color": "2",
+      "id": "WNEKoJ7O-k"
     }
   ]
 }
