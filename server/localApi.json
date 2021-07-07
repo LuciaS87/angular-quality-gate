@@ -33,12 +33,12 @@
       "color": 1
     },
     {
-      "name": "Kraków 111",
-      "longitude": "19.957947163916844",
-      "latitude": "50.03826492196233",
-      "description": "sfagfas",
-      "color": "2",
-      "id": "WNEKoJ7O-k"
+      "name": "Adam Mickiewicz Monument",
+      "longitude": "19.937908385437343",
+      "latitude": "50.06150072587465",
+      "description": "Pomnik Mickiewicza",
+      "color": "3",
+      "id": "cL31pEUeDI"
     }
   ]
 }

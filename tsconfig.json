@@ -7,6 +7,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "types": ["cypress"],
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,

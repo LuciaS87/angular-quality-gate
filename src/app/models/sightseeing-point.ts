@@ -17,7 +17,7 @@ export class SightseeingPoint {
   }
 
   getColor(color: number): string {
-    return SightseeingPoint.colors().get(color);
+    return SightseeingPoint.colors().get(+color);
   }
 
 }
