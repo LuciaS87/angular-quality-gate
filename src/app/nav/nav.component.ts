@@ -17,7 +17,8 @@ export class NavComponent {
     },
     {
       title: 'Add Site',
-      path: 'lazy/add'
+      path: 'lazy/add',
+      style: 'addButton'
     }
   ];
 }

@@ -10,7 +10,7 @@
       <div
         *ngIf="name?.invalid && (name?.dirty ||name?.touched)" class="alert alert-danger">
         <div *ngIf ="name.errors?.required">
-          City name is required
+          Site name is required
         </div>
       </div>
       <p>
@@ -20,7 +20,7 @@
       <div
         *ngIf="longitude?.invalid && (longitude?.dirty ||longitude?.touched)" class="alert alert-danger">
         <div *ngIf ="longitude.errors?.required">
-          Coordinates are required
+          Longitude are required
         </div>
       </div>
       <p>
@@ -30,7 +30,7 @@
       <div
         *ngIf="latitude?.invalid && (latitude?.dirty ||latitude?.touched)" class="alert alert-danger">
         <div *ngIf ="latitude.errors?.required">
-          Coordinates are required
+          Latitude are required
         </div>
       </div>
       <p>
@@ -50,15 +50,15 @@
         <label for="color">Color </label>
         <select id="color" name="color" formControlName="color">
           <option>Select color</option>
-          <option *ngFor="let color of siteColors">
-            {{color}}
+          <option [value]="color[0]" *ngFor="let color of siteColors">
+            {{color[1]}}
           </option>
         </select>
       </p>
       <div
-        *ngIf="color?.invalid && (color?.dirty || color?.touched)" class="alert alert-danger">
+        *ngIf="color && color?.invalid && (color?.dirty || color?.touched)" class="alert alert-danger">
         <div *ngIf ="color.errors?.required">
-          Country is required
+          Color is required
         </div>
       </div>
       <button type="submit" class="btn btn-danger" [disabled]="!addForm.valid">Submit</button>

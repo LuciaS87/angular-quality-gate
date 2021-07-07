@@ -14,13 +14,12 @@ export class FormComponent implements OnInit {
   site: SightseeingPoint = new SightseeingPoint('', 0, 0, new Country(), '', 0);
   addForm!: FormGroup;
   selectedSight!: SightseeingPoint;
-  siteColors: number[];
+  siteColors: [number, string][] = [...SightseeingPoint.colors()];
 
   constructor(private sightsService: SightsService, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.siteColors = Array.from(SightseeingPoint.colors().keys());
     this.selectedSight = this.sightsService.selectedSight;
     this.site.country.name = 'POLAND';
     this.site.country.iata_code = 'PL';
@@ -38,8 +37,8 @@ export class FormComponent implements OnInit {
         Validators.required,
         Validators.maxLength(256)
       ]),
-      color: new FormControl(this.site.color,
-        [Validators.required]
+      color: new FormControl(this.site.color, [
+        Validators.required]
       )
     });
     if (this.selectedSight) {
@@ -48,23 +47,23 @@ export class FormComponent implements OnInit {
   }
 
   get name(): AbstractControl {
-    return this.addForm.get('name') as AbstractControl;
+    return this.addForm.get('name');
   }
 
   get longitude(): AbstractControl {
-    return this.addForm.get('longitude') as AbstractControl;
+    return this.addForm.get('longitude');
   }
 
   get latitude(): AbstractControl {
-    return this.addForm.get('latitude') as AbstractControl;
+    return this.addForm.get('latitude');
   }
 
   get description(): AbstractControl {
-    return this.addForm.get('description') as AbstractControl;
+    return this.addForm.get('description');
   }
 
   get color(): AbstractControl {
-    return this.addForm.get('color') as AbstractControl;
+    return this.addForm.get('color');
   }
 
   onSubmit(addForm: FormGroup): void {
