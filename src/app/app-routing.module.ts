@@ -6,7 +6,9 @@ import {SightsListComponent} from './sights-list/sights-list.component';
 const routes: Routes = [
   {path: '', redirectTo: '/sights', pathMatch: 'full'},
   {path: 'sights', component: SightsComponent},
-  {path: 'sights-list', component: SightsListComponent}
+  {path: 'sights-list', component: SightsListComponent},
+  {path: 'lazy', loadChildren: () => import('./detail-add-edit/detail-add-edit-routing.module')
+      .then(m => m.DetailAddEditRoutingModule)}
 ];
 
 @NgModule({

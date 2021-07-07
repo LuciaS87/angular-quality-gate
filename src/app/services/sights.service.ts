@@ -10,14 +10,13 @@ import {map, tap} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SightsService {
-
   selectedSight: SightseeingPoint;
 
   constructor(private http: HttpClient) {
   }
 
   getSights(): Observable<SightseeingPoint[]> {
-     return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
+    return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
       tap(console.log),
       map(sights => {
         return sights.map(sight => {
