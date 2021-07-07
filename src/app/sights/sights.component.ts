@@ -24,7 +24,6 @@ export class SightsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.sightsService.selectedSight = null;
     this.currentCity = new Location(19.9449, 50.0646);
     this.sights$ = this.sightsService.getSights();
   }

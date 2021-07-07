@@ -4,7 +4,8 @@
     <h4>{{sight.name}}</h4>
       <sub>{{sight.longitude}} {{sight.latitude}}</sub>
       <div class="highlight" [style.background-color]="sight.getColor(sight.color)"></div>
-    <button class="m-1 btn btn-sm btn-success" (click)= "setActiveCity(sight)" routerLink="../lazy/detail/{{sight.id}}">Details</button>
-    <button class="m-1 btn btn-sm btn-warning" (click)= "setActiveCity(sight)"  routerLink="../lazy/edit/{{sight.id}}" >Edit</button>
+    <button class="m-1 btn btn-sm btn-success" (click)= "setActiveSight(sight)" routerLink="../lazy/detail/{{sight.id}}">Details</button>
+    <button class="m-1 btn btn-sm btn-warning" (click)= "setActiveSight(sight)"  routerLink="../lazy/edit/{{sight.id}}" >Edit</button>
+    <button class="m-1 btn btn-sm btn-danger" (click) = "deleteSight(sight)">Delete</button>
   </div>
 </div>

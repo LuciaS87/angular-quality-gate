@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.selectedSight = this.sightsService.selectedSight;
     this.site.country.name = 'POLAND';
-    this.site.country.iata_code = 'PL';
+    this.site.country.iataCode = 'PL';
     this.addForm = new FormGroup({
       name: new FormControl(this.site.name, [
         Validators.required,
@@ -67,14 +67,14 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(addForm: FormGroup): void {
-    this.selectedSight ? this.editSite(addForm) : this.addSite(addForm);
+    this.selectedSight ? this.editSight(addForm) : this.addSight(addForm);
   }
 
-  private addSite(addForm: FormGroup): void {
-    this.sightsService.addSite(addForm.value).subscribe(() => this.router.navigate(['']));
+  private addSight(addForm: FormGroup): void {
+    this.sightsService.addSight(addForm.value).subscribe(() => this.router.navigate(['']));
   }
 
-  private editSite(addForm: FormGroup): void {
-    this.sightsService.updateSite(addForm.value).subscribe(() => this.router.navigate(['']));
+  private editSight(addForm: FormGroup): void {
+    this.sightsService.updateSight(addForm.value).subscribe(() => this.router.navigate(['']));
   }
 }

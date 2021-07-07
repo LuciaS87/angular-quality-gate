@@ -5,7 +5,7 @@
       "longitude": 19.9353576,
       "latitude": 50.0541492,
       "description": "The Wawel Royal Castle and the Wawel Hill constitute the most historically and culturally important site in Poland. For centuries the residence of kings and the symbol of Polish statehood, the castle is now one of the country’s premier art museums.",
-      "color": 0,
+      "color": 1,
       "id": "1"
     },
     {
@@ -33,236 +33,20 @@
       "color": 1
     },
     {
-      "name": "Adam Mickiewicz Monument",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "Pomnik Mickiewicza",
-      "color": "3",
-      "id": "cL31pEUeDI"
+      "name": "Warszawa",
+      "longitude": 19.957947163916888,
+      "latitude": 50.06150072587465,
+      "description": "angular",
+      "color": 3,
+      "id": "4ejvtMCr6F"
     },
     {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "-yYMRV+tgp"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "+-8DqcFbr0"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "O5isRrfjjN"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "-ICE9w9VHg"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "FPb4Q2<8FB"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "G7X1E_F>Ou"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "9BghBYKTbf"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "tyZ0pUfg0R"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "wspR1YRISs"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "Z>E6QmWYmD"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "6yc*p9IUTH"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "lFwVyU6ofw"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "Zyt03Pf1oj"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "aQEJCYKY_W"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "ya*rKz1cFS"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "019.937908385437343",
-      "latitude": "050.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "o-QW!bsfla"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "FRq6pvQrr0"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "qw61C!9Df8"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "LcN!JpbhtI"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "nhLljw>MqS"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "t7wBbyfH+7"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "nJy-He+Xf2"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "MMlFaYxR8r"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "8FVl+3_rxk"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "igF9D8*5fF"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "*7kMvZGXrV"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "k46LyTKslr"
-    },
-    {
-      "name": "Kraków",
-      "longitude": "19.937908385437343",
-      "latitude": "50.06150072587465",
-      "description": "przykładowy opis",
-      "color": "1",
-      "id": "KYq9N+El9z"
+      "name": "pomnik Adama Mickiewicza",
+      "longitude": 19.937908385437343,
+      "latitude": 50.06150072587465,
+      "description": "Możesz sprawdzić na mapie, czy punkt zostanie poprawnie wyświetlony an rynku w Krakowie.",
+      "color": 1,
+      "id": "2pH*v2oU5*"
     }
   ]
 }

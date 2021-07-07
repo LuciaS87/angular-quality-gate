@@ -26,12 +26,11 @@ export class SightsService {
 
   getSights(): Observable<SightseeingPoint[]> {
     return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
-      tap(console.log),
       map(sights => {
         return sights.map(sight => {
           const country = new Country();
           country.name = 'POLAND';
-          country.iata_code = 'PL';
+          country.iataCode = 'PL';
 
           return new SightseeingPoint(
             sight.name,
@@ -47,11 +46,14 @@ export class SightsService {
     );
   }
 
-  addSite(sight: SightseeingPoint): Observable<void> {
+  addSight(sight: SightseeingPoint): Observable<void> {
     sight.id = SightsService.generateId();
     return this.http.post<void>(`${environment.apiUrl}/sights`, sight);
   }
-  updateSite(sight: SightseeingPoint): Observable<SightseeingPoint>{
+  updateSight(sight: SightseeingPoint): Observable<SightseeingPoint>{
     return this.http.put<SightseeingPoint>(`${environment.apiUrl}/sights/${this.selectedSight.id}`, sight);
+  }
+  deleteSight(sightId: string): Observable<SightseeingPoint> {
+    return this.http.delete<SightseeingPoint>(`${environment.apiUrl}/sights/${sightId}`);
   }
 }

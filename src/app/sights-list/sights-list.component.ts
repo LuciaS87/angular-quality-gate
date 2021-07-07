@@ -15,14 +15,22 @@ export class SightsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getAllSights();
+    this.sightsService.selectedSight = undefined;
+  }
+
+  getAllSights(): void {
     this.sightsService.getSights().subscribe(sights => {
       this.sights = sights;
-      console.log(sights);
     });
   }
 
-  setActiveCity(site: SightseeingPoint): void {
+  setActiveSight(site: SightseeingPoint): void {
     this.selectedSight = site;
     this.sightsService.selectedSight = this.selectedSight;
+  }
+
+  deleteSight(sight: SightseeingPoint): void {
+    this.sightsService.deleteSight(sight.id).subscribe(() => this.getAllSights());
   }
 }
